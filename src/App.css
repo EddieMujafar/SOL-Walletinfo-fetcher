@@ -1,0 +1,264 @@
+/* General Page Styling */
+body {
+  background: linear-gradient(135deg, #504e4e88, #a6b8db);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: all 0.3s ease; /* Smooth transition for mode changes */
+}
+
+/* Light Mode (Default) */
+.light-mode {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+/* Centered App Container */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+/* Animated Title */
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  animation: bounceEffect 2s infinite;
+}
+
+/* Glowing "I" in "GENIE" */
+.flaming-i {
+  color: orange;
+  text-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347;
+  animation: flameFlicker 1s infinite alternate ease-in-out;
+}
+
+/* Input Field Styling */
+.input-address {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid transparent;
+  color: white;
+  padding: 12px;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-address:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+  outline: none;
+}
+
+/* Stylish Animated Button */
+.button-animated {
+  background: linear-gradient(135deg, #4CAF50, #2E8B57);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.button-animated:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(72, 255, 141, 0.7);
+}
+
+.button-animated:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 25px rgba(72, 255, 141, 0.9);
+}
+
+/* Balance Animation */
+.balance {
+  font-size: 22px;
+  font-weight: bold;
+  color: lightgreen;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+/* Transactions List */
+.transaction-list {
+  list-style: none;
+  padding: 0;
+}
+
+.transaction-list li {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.transaction-list li:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Stylish Transaction Buttons */
+.transaction-button {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.6);
+  text-align: center;
+  width: 100%;
+}
+
+.transaction-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.8);
+  background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse the gradient on hover */
+}
+
+/* Animation for Transaction Button */
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the pulse animation */
+.transaction-button {
+  animation: pulseEffect 2s ease-in-out infinite;
+}
+
+.transaction-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.transaction-buttons button {
+  width: 80%;
+  margin: 5px 0;
+  text-align: center;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing Effect Animation */
+@keyframes pulseGlow {
+  0% {
+    color: rgb(32, 88, 32);
+    text-shadow: 0 0 10px rgb(44, 117, 44), 0 0 20px rgb(9, 56, 9);
+  }
+  100% {
+    color: rgb(2, 36, 2);
+    text-shadow: 0 0 20px rgb(4, 41, 4), 0 0 30px rgb(2, 32, 2);
+  }
+}
+
+/* Bounce Effect for Title */
+@keyframes bounceEffect {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Flaming Effect */
+@keyframes flameFlicker {
+  0% {
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #ff6347;
+  }
+  100% {
+    text-shadow: 0 0 15px #ff6347, 0 0 25px #ff4500;
+  }
+}
+
+/* Position theme toggle button at bottom left, outside the container */
+.theme-toggle {
+  position: fixed;
+  bottom: 365px;
+  left: 760px;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50px;  /* Round shape */
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.5);
+  transition: all 0.4s ease;
+}
+
+/* Button hover effect */
+.theme-toggle:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.8);
+}
+
+/* Button active effect */
+.theme-toggle:active {
+  background-color: #1f6395;
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 1);
+}
+
+/* Button glowing effect when hovered */
+.theme-toggle:hover {
+  animation: glowEffect 1s infinite alternate;
+}
+
+/* Glowing effect animation */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 10px #3498db, 0 0 20px #3498db;
+  }
+  100% {
+    box-shadow: 0 0 20px #2980b9, 0 0 30px #2980b9;
+  }
+}
