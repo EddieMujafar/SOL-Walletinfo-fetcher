@@ -10,7 +10,8 @@ function App() {
   const [url, setUrl] = useState("");
   const [darkMode, setDarkMode] = useState(false);
 
-  const rpc = createSolanaRpc("https://sleek-neat-frog.solana-mainnet.quiknode.pro/b88d004bf58d30abde47d951dd8e483991d39204");
+//Replace with YOUR Custom RPC
+  const rpc = createSolanaRpc("YOUR_CUSTOM_RPC_URL");
 
   const fetchWalletInfo = async () => {
     try {
